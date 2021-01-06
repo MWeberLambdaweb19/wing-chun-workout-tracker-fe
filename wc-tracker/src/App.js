@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+      <div id="sample-pfp"></div>
+      <h1>My Workouts</h1>
       </header>
+      <div class="workouts-list">
+        <div class="workout-expand">
+          <h3>January 3rd, 2021</h3>
+          <ul>
+            <li>Tan Sau 100x</li>
+            <li>Pak Dar 100x</li>
+            <li>Sil Lum Tau 50x</li>
+          </ul>
+        </div>
+        <div class="workout-collapse">
+          <h3>January 2nd, 2021</h3>
+        </div>
+        <div class="workout-collapse">
+          <h3>January 2nd, 2021</h3>
+        </div>
+      </div>
     </div>
   );
 }
