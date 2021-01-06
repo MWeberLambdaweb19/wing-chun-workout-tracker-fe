@@ -1,0 +1,11 @@
+Things to add
+
+To home screen:
+(if logged in)
+-calendar with marked days of workouts (a la Github green squares)
+
+Profile page:
+-change lineage
+
+Settings page:
+-change color of calendar
