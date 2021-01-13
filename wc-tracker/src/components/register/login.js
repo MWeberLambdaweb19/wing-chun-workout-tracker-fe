@@ -7,17 +7,18 @@ function Login() {
             <p>**Your email is not shared, sold, or otherwise distributed</p>
             <form>
                 <label for="email">Email* **</label>
-                <input></input>
+                <input name="email" type="email"></input>
                 <label for="first name">First Name</label>
-                <input></input>
+                <input name="first name" type="text"></input>
                 <label for="last name">Last Name (Or Initial)</label>
-                <input></input>
-                <label for="username">Username</label>
+                <input name="last name" type="text"></input>
+                <label for="username">Username*</label>
                 <input></input>
                 <label for="password">Password</label>
-                <input></input>
+                <input name="password" type="password"></input>
                 <label for="verify password">Verify Password</label>
-                <button></button>
+                <input name="verify password" type="password"></input>
+                <input type="button">Submit</input>
             </form>
         </div>
     )
