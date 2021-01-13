@@ -3,9 +3,9 @@ import React from 'react';
 function Register() {
     return(
         <div>
-            <form>
+            <form onSubmit="submit">
                 <input></input>
-                <button></button>
+                <button>Submit</button>
             </form>
         </div>
     )
