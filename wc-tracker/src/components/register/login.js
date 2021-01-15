@@ -13,7 +13,7 @@ class Login extends React.Component {
         }
 
         this.handleChanges = (event) => {
-            this.setState({value: event.target.value})
+            this.setState({event: event.target.value})
             console.log(event.target.value)
         }
 
@@ -21,7 +21,8 @@ class Login extends React.Component {
     }
     
         handleSubmit(event) {
-            alert('Thank you for registering!' + this.state.username)
+            console.log(this.state.username)
+            alert('Thank you for registering! ' + this.state.username)
             event.preventDefault();
         }
 
