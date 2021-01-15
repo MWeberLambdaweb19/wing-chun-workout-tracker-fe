@@ -14,7 +14,7 @@ class Login extends React.Component {
 
         this.handleChanges = (event) => {
             this.setState({value: event.target.value})
-            console.log("hi")
+            console.log(event.target.value)
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -43,7 +43,7 @@ class Login extends React.Component {
                     <input name="password" type="password"></input>
                     <label for="verify password">Verify Password</label>
                     <input name="verify password" type="password"></input>
-                    <input type="button" name="submit" value="Submit"></input>
+                    <input type="submit" name="submit" value="Submit"></input>
                 </form>
             </div>
         )
