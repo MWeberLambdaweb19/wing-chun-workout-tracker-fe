@@ -4,16 +4,17 @@ class Login extends React.Component {
     constructor(props) {
         super(props)
         this.state={
-            email="",
-            first="",
-            last="",
-            username="",
-            password="",
-            verifypassword=""
+            email:"",
+            first:"",
+            last:"",
+            username:"",
+            password:"",
+            verifypassword:""
         }
 
         this.handleChanges = (event) => {
             this.setState({value: event.target.value})
+            console.log("hi")
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -37,7 +38,7 @@ class Login extends React.Component {
                     <label for="last name">Last Name (Or Initial)</label>
                     <input name="last name" type="text"></input>
                     <label for="username">Username*</label>
-                    <input name="username" value={this.state.value} type="text"></input>
+                    <input name="username" value={this.state.value} onChange={this.handleChanges} type="text"></input>
                     <label for="password">Password</label>
                     <input name="password" type="password"></input>
                     <label for="verify password">Verify Password</label>
