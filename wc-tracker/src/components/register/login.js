@@ -34,7 +34,7 @@ class Login extends React.Component {
             <div>
                 <p>*Must be filled</p>
                 <p>**Your email is not shared, sold, or otherwise distributed</p>
-                <form onSubmit={() => handleSubmit(Event, this.state.username)}>
+                <form onSubmit={(event) => handleSubmit(event, this.state.username)}>
                     <label for="email">Email* **</label>
                     <input name="email" type="email"></input>
                     <label for="first name">First Name</label>

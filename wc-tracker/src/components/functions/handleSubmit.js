@@ -1,6 +1,6 @@
-function handleSubmit(Event, username) {
-    Event.preventDefault()
-    console.log(username)
+function handleSubmit(event, username) {
+    event.preventDefault()
+    console.log('Hit!' + username)
     alert('Thank you for registering! ' + username)
 }
 
