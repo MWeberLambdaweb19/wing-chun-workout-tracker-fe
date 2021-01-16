@@ -1,4 +1,5 @@
 import React from 'react';
+import {handleSubmit} from '../functions/handleSubmit.js'
 
 class Login extends React.Component {
     constructor(props) {
@@ -13,25 +14,27 @@ class Login extends React.Component {
         }
 
         this.handleChanges = (event) => {
+            let target = event.target.name
             this.setState({event: event.target.value})
             console.log(event.target.value)
+            console.log(event.target.name)
         }
 
-        this.handleSubmit = this.handleSubmit.bind(this)
+        // this.handleSubmit = this.handleSubmit.bind(this)
     }
     
-        handleSubmit(event) {
-            console.log(this.state.username)
-            alert('Thank you for registering! ' + this.state.username)
-            event.preventDefault();
-        }
+        // handleSubmit(event) {
+        //     console.log(this.state.username)
+        //     alert('Thank you for registering! ' + this.state.username)
+        //     event.preventDefault();
+        // }
 
     render() {
         return(
             <div>
                 <p>*Must be filled</p>
                 <p>**Your email is not shared, sold, or otherwise distributed</p>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={(event) => handleSubmit(event, this.state.username)}>
                     <label for="email">Email* **</label>
                     <input name="email" type="email"></input>
                     <label for="first name">First Name</label>
