@@ -1,5 +1,5 @@
 import './App.css';
-import Login from './components/register/login';
+import Register from './components/register/register';
 
 // For right now, the entire application will be "single-page"
 // this means that I am coding and designing the entire app on one page, in one functional component
@@ -11,7 +11,7 @@ function App() {
     <div>
     {/* WORKOUT PAGE */}
     {/* <header> */}
-     <Login />
+     <Register />
      {/* <div id="sample-pfp"></div>
       <h1>My Workouts</h1>
       </header>
