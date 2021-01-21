@@ -15,9 +15,7 @@ class Login extends React.Component {
 
         this.handleChanges = (event) => {
             let target = event.target.name
-            this.setState({event: event.target.value})
-            console.log(event.target.value)
-            console.log(event.target.name)
+            this.setState({target: event.target.value})
         }
 
         // this.handleSubmit = this.handleSubmit.bind(this)
