@@ -12,10 +12,12 @@ class Login extends React.Component {
             password:"",
             verifypassword:""
         }
+        
 
         this.handleChanges = (event) => {
-            let target = event.target.name
-            this.setState({target: event.target.value})
+            const target = event.target.name
+            this.setState({...this.state, [target]: event.target.value})
+            // DO NOT FORGET: [] AROUND A VARIABLE MAKE IT A DYNAMIC KEY
         }
 
         // this.handleSubmit = this.handleSubmit.bind(this)
