@@ -10,9 +10,9 @@ function App() {
   return (
     <div>
     {/* WORKOUT PAGE */}
-    <header>
+    {/* <header> */}
      <Login />
-     <div id="sample-pfp"></div>
+     {/* <div id="sample-pfp"></div>
       <h1>My Workouts</h1>
       </header>
       <div class="workouts-list">
@@ -33,7 +33,7 @@ function App() {
       </div>
 
       {/* PROFILE PAGE PAGE */}
-      <header>
+      {/* <header>
         <h1>My Profile</h1>
       </header>
         <div>
@@ -43,10 +43,10 @@ function App() {
         <p>Profile Picture:
           <div id="sample-pfp"></div>
         </p>
-        </div>
+        </div> */}
 
     {/* WELCOME/HOME PAGE */}
-    <header>
+    {/* <header>
       <h1>Welcome!</h1>
     </header>
     <div>
@@ -55,7 +55,7 @@ function App() {
       <ul>
         <li>Created a skeleton of the website</li>
       </ul>
-    </div>
+    </div> */} 
     </div>
   );
 }
