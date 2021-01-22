@@ -26,14 +26,12 @@ class Register extends React.Component {
     }
     
         handleSubmit(event) {
-            this.passwordAuth()
+            this.passwordAuth(this.state.password, this.state.verifypassword)
             alert('Thank you for registering! ' + this.state.username)
             event.preventDefault();
         }
 
-        passwordAuth() {
-            const pass = this.state.password
-            const ver = this.state.verifypassword
+        passwordAuth(pass, ver) {
             if (pass === ver) {
                 return
             } else if (pass !== ver) {
