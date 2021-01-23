@@ -26,12 +26,13 @@ class Register extends React.Component {
     }
     
         handleSubmit(event) {
-            this.passwordAuth(this.state.password, this.state.verifypassword)
+            this.passwordAuth(event, this.state.password, this.state.verifypassword)
             alert('Thank you for registering! ' + this.state.username)
             event.preventDefault();
         }
 
-        passwordAuth(pass, ver) {
+        passwordAuth(event, pass, ver) {
+            event.preventDefault();
             if (pass === ver) {
                 return
             } else if (pass !== ver) {
@@ -45,7 +46,7 @@ class Register extends React.Component {
             <div>
                 <p>*Must be filled</p>
                 <p>**Your email is not shared, sold, or otherwise distributed</p>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={() => this.handleSubmit()}>
                     <label for="email">Email* **</label>
                     <input name="email" type="email" value={this.state.value} onChange={this.handleChanges}></input>
                     <label for="first">First Name</label>
