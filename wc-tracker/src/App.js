@@ -9,6 +9,7 @@ import Register from './components/register/register';
 function App() {
   return (
     <div>
+      <div class="test-pfp"></div>
     {/* WORKOUT PAGE */}
     {/* <header> */}
      <Register />
