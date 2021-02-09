@@ -1,70 +1,96 @@
-import React from 'react';
-import SignedUp from './signedup';
+import { useState } from "react";
+import React from "react";
+import { Button } from "@material-ui/core";
 
-class Register extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state={
-            email:"",
-            first:"",
-            last:"",
-            username:"",
-            password:"",
-            verifypassword:""
-        }
-        
+// function handleSubmit() {
+//   console.log();
+// }
 
-        this.handleChanges = (event) => {
-            const target = event.target.name
-            this.setState({[target]: event.target.value})
-            // DO NOT FORGET: [] AROUND A VARIABLE MAKE IT A DYNAMIC KEY
-        }
+function Register() {
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [password, setPassword] = useState("");
+  // const [verifyPassword, setVerifyPassword] = useState("");
 
-        // You need this if you don't write the function in the constructor
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.passwordAuth = this.passwordAuth(this)
-    }
-    
-        handleSubmit(event) {
-            this.passwordAuth(event, this.state.password, this.state.verifypassword)
-            alert('Thank you for registering! ' + this.state.username)
-            event.preventDefault();
-        }
+  const state = {
+    Email: email,
+    Username: username,
+    "First Name": firstName,
+    "Last Name": lastName,
+    Password: password
+  };
 
-        passwordAuth(event, pass, ver) {
-            event.preventDefault();
-            if (pass === ver) {
-                return
-            } else if (pass !== ver) {
-                alert('Your passwords do not match!')
-                return
-            }
-        }
-
-    render() {
-        return(
-            <div>
-                <p>*Must be filled</p>
-                <p>**Your email is not shared, sold, or otherwise distributed</p>
-                <form onSubmit={() => this.handleSubmit()}>
-                    <label for="email">Email* **</label>
-                    <input name="email" type="email" value={this.state.value} onChange={this.handleChanges}></input>
-                    <label for="first">First Name</label>
-                    <input name="first" type="text" value={this.state.value} onChange={this.handleChanges}></input>
-                    <label for="last">Last Name (Or Initial)</label>
-                    <input name="last" type="text" value={this.state.value} onChange={this.handleChanges}></input>
-                    <label for="username">Username*</label>
-                    <input name="username" value={this.state.value} onChange={this.handleChanges} type="text"></input>
-                    <label for="password">Password</label>
-                    <input name="password" type="password" value={this.state.value} onChange={this.handleChanges}></input>
-                    <label for="verify password">Verify Password</label>
-                    <input name="verify password" type="password" value={this.state.value} onChange={this.handleChanges}></input>
-                    <input type="submit" name="submit" value="Submit"></input>
-                </form>
-            <SignedUp data={this.state} />
-            </div>
-        )
-    }
+  return (
+    <div>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          console.log({ state });
+        }}
+      >
+        <label htmlFor="email">Email</label>
+        <input
+          placeholder="email"
+          name="email"
+          type="text"
+          label="Email"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />
+        <label htmlFor="username">Username</label>
+        <input
+          placeholder="username"
+          name="username"
+          type="text"
+          label="Username"
+          value={username}
+          onChange={(e) => {
+            setUsername(e.target.value);
+          }}
+        />
+        <label htmlFor="firstName">First Name</label>
+        <input
+          placeholder="first name"
+          name="firstName"
+          type="text"
+          label="First Name"
+          value={firstName}
+          onChange={(e) => {
+            setFirstName(e.target.value);
+          }}
+        />
+        <label htmlFor="lastName">Last Name</label>
+        <input
+          placeholder="last name"
+          name="lastName"
+          type="text"
+          label="Last Name"
+          value={lastName}
+          onChange={(e) => {
+            setLastName(e.target.value);
+          }}
+        />
+        <label htmlFor="password">Password</label>
+        <input
+          placeholder="password"
+          name="password"
+          type="text"
+          label="password"
+          value={password}
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+        />
+        <Button type="submit" color="primary">
+          Submit
+        </Button>
+      </form>
+    </div>
+  );
 }
 
 export default Register;
