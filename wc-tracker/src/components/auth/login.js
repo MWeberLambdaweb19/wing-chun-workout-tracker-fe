@@ -1,27 +1,18 @@
-import { logins } from "../dummyData/dummyData.js";
 import { useState } from "react";
+import { Button } from "@material-ui/core";
 
 function Login() {
   const [emailUser, setEmailUser] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSubmit() {
-    if (true) {
-      if (emailUser == logins["email"] || emailUser == logins["user]"]) {
-        return true;
-      }
-      if (password == logins["password"]) {
-        return true;
-      } else {
-        return false;
-      }
-      console.log("You have logged in!");
-    } else {
-    }
-  }
   return (
     <div>
-      <form>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          console.log("You have logged in!");
+        }}
+      >
         <label htmlFor="emailUsername">Your Email or Username</label>
         <input
           name="emailUsername"
@@ -34,6 +25,7 @@ function Login() {
           placeholder="Your password"
           onChange={(e) => setPassword(e.target.value)}
         />
+        <Button type="submit">Submit</Button>
       </form>
     </div>
   );
