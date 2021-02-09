@@ -1,6 +1,6 @@
-#sample-pfp {
-  width: 100px;
-  height: 100px;
+.test-pfp {
   background-color: red;
-  border-radius: 50%;
+  width: 100rem;
+  height: 100rem;
+  border-radius: 25%;
 }
