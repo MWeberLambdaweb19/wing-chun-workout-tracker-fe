@@ -14,7 +14,13 @@ function Register() {
   const [password, setPassword] = useState("");
   // const [verifyPassword, setVerifyPassword] = useState("");
 
-  const state = [email, username, firstName, lastName, password];
+  const state = {
+    Email: email,
+    Username: username,
+    "First Name": firstName,
+    "Last Name": lastName,
+    Password: password
+  };
 
   return (
     <div>
@@ -24,59 +30,59 @@ function Register() {
           console.log({ state });
         }}
       >
-        <label for="email">Email</label>
+        <label htmlFor="email">Email</label>
         <input
           placeholder="email"
           name="email"
           type="text"
           label="Email"
           value={email}
-          onChange={() => {
-            setEmail();
+          onChange={(e) => {
+            setEmail(e.target.value);
           }}
         />
-        <label for="username">Username</label>
+        <label htmlFor="username">Username</label>
         <input
           placeholder="username"
           name="username"
           type="text"
           label="Username"
           value={username}
-          onChange={() => {
-            setUsername();
+          onChange={(e) => {
+            setUsername(e.target.value);
           }}
         />
-        <label for="firstName">First Name</label>
+        <label htmlFor="firstName">First Name</label>
         <input
           placeholder="first name"
           name="firstName"
           type="text"
           label="First Name"
           value={firstName}
-          onChange={() => {
-            setFirstName();
+          onChange={(e) => {
+            setFirstName(e.target.value);
           }}
         />
-        <label for="lastName">Last Name</label>
+        <label htmlFor="lastName">Last Name</label>
         <input
           placeholder="last name"
           name="lastName"
           type="text"
           label="Last Name"
           value={lastName}
-          onChange={() => {
-            setLastName();
+          onChange={(e) => {
+            setLastName(e.target.value);
           }}
         />
-        <label for="password">Password</label>
+        <label htmlFor="password">Password</label>
         <input
           placeholder="password"
           name="password"
           type="text"
           label="password"
           value={password}
-          onChange={() => {
-            setPassword();
+          onChange={(e) => {
+            setPassword(e.target.value);
           }}
         />
         <Button type="submit" color="primary">
