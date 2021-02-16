@@ -7,6 +7,14 @@ import {
   } from "../dummyData/dummyData.js";
   
   function ExercisesList() {
+    let acc = document.getElementsByClassName("accordion");
+    console.log(acc);
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        acc[i].classList.toggle("active");
+        console.log(acc[i]);
+      });
+    }
     return (
       <div>
         <div>
@@ -20,41 +28,31 @@ import {
             culpa qui officia deserunt mollit anim id est laborum."
           </p>
         </div>
-        <h3 class="accordion">
-          Group 1 <span class="accordion-left">v</span>
-        </h3>
+        <h3 class="accordion">Group 1</h3>
         <div class="panel">
-          {group1.map((item) => (
-            <p>{item}</p>
+          {group1.map((item, key) => (
+            <p id={key}>{item}</p>
           ))}
         </div>
-        <h3 class="accordion">
-          Group 2 <span class="accordion-left">v</span>
-        </h3>
+        <h3 class="accordion">Group 2</h3>
         <div class="panel">
           {group2.map((item) => (
             <p>{item}</p>
           ))}
         </div>
-        <h3 class="accordion">
-          Group 3 <span class="accordion-left">v</span>
-        </h3>
+        <h3 class="accordion">Group 3</h3>
         <div class="panel">
           {group3.map((item) => (
             <p>{item}</p>
           ))}
         </div>
-        <h3 class="accordion">
-          Group 4 <span class="accordion-left">v</span>
-        </h3>
+        <h3 class="accordion">Group 4</h3>
         <div class="panel">
           {group4.map((item) => (
             <p>{item}</p>
           ))}
         </div>
-        <h3 class="accordion">
-          Group 5 <span class="accordion-left">v</span>
-        </h3>
+        <h3 class="accordion">Group 5</h3>
         <div class="panel">
           {group5.map((item) => (
             <p>{item}</p>
