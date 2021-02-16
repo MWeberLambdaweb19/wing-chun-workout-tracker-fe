@@ -1,66 +1,124 @@
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Accordion from "@material-ui/core/Accordion";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
+import Typography from "@material-ui/core/Typography";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import {
-    group1,
-    group2,
-    group3,
-    group4,
-    group5
-  } from "../dummyData/dummyData.js";
-  
-  function ExercisesList() {
-    let acc = document.getElementsByClassName("accordion");
-    console.log(acc);
-    for (let i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        acc[i].classList.toggle("active");
-        console.log(acc[i]);
-      });
-    }
-    return (
-      <div>
-        <div>
-          <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
-          </p>
-        </div>
-        <h3 class="accordion">Group 1</h3>
-        <div class="panel">
-          {group1.map((item, key) => (
-            <p id={key}>{item}</p>
-          ))}
-        </div>
-        <h3 class="accordion">Group 2</h3>
-        <div class="panel">
-          {group2.map((item) => (
-            <p>{item}</p>
-          ))}
-        </div>
-        <h3 class="accordion">Group 3</h3>
-        <div class="panel">
-          {group3.map((item) => (
-            <p>{item}</p>
-          ))}
-        </div>
-        <h3 class="accordion">Group 4</h3>
-        <div class="panel">
-          {group4.map((item) => (
-            <p>{item}</p>
-          ))}
-        </div>
-        <h3 class="accordion">Group 5</h3>
-        <div class="panel">
-          {group5.map((item) => (
-            <p>{item}</p>
-          ))}
-        </div>
-      </div>
-    );
+  group1,
+  group2,
+  group3,
+  group4,
+  group5
+} from "../dummyData/dummyData.js";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: "100%"
+  },
+  heading: {
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular
   }
-  
-  export default ExercisesList;
-  
+}));
+
+function ExercisesList() {
+  return (
+    <div>
+      <div>
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </p>
+      </div>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Group 1</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            {group1.map((item) => (
+              <Typography>{item}</Typography>
+            ))}
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Group 2</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            {group2.map((item) => (
+              <Typography>{item}</Typography>
+            ))}
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Group 3</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            {group3.map((item) => (
+              <Typography>{item}</Typography>
+            ))}
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Group 4</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            {group4.map((item) => (
+              <Typography>{item}</Typography>
+            ))}
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>Group 5</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            {group5.map((item) => (
+              <Typography>{item}</Typography>
+            ))}
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+    </div>
+  );
+}
+
+export default ExercisesList;
