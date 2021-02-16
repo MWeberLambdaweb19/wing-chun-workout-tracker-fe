@@ -1,6 +1,21 @@
-.test-pfp {
-  background-color: red;
-  width: 100rem;
-  height: 100rem;
-  border-radius: 25%;
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  max-width: 1000px;
+}
+
+.accordion {
+  background-color: #eeeeee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion-left {
+  text-align: right;
 }

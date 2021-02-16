@@ -1,5 +1,5 @@
 # To-Do
--Make list on Trello for FE/BE
+-Make list on Trello for FE/BE [x]
 
 # Future Additions
 -Grid counter that darkens in your sash rank color like Github
@@ -11,6 +11,9 @@
 -Location
 -Be able to fork other workouts
 -Should include weight lifting?
+-Twitter Feed
+-Include recordings to sets
+
 
 # Notes
 -Call it GungHub?
