@@ -1,6 +1,7 @@
 import "./styles.css";
 import Register from "./components/auth/register";
 import Login from "./components/auth/login";
+
 export default function App() {
   return (
     <div className="App">
@@ -13,7 +14,6 @@ export default function App() {
   );
 }
 
-export default App;
 
 // BELOW IS LEGACY CODE
 
