@@ -4,6 +4,20 @@
   max-width: 1000px;
 }
 
+.Navbar {
+  background: #444;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Link {
+  color: white;
+}
+
+.Link:hover {
+  background: white;
+  color: #444;
+}
 .accordion {
   background-color: #eeeeee;
   color: #444;
@@ -16,6 +30,14 @@
   transition: 0.4s;
 }
 
-.accordion-left {
-  text-align: right;
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
 }
