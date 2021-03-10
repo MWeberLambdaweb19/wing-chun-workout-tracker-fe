@@ -26,7 +26,7 @@ export default function App() {
         </Link>
       </nav>
 
-      {/* <Register /> */}
+      <Register />
       {/* <Login /> */}
       <ExercisesList />
     </div>

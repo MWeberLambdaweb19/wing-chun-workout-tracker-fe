@@ -12,6 +12,7 @@
 
 .Link {
   color: white;
+  max-width: fit-content;
 }
 
 .Link:hover {
