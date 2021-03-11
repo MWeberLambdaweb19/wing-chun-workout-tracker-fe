@@ -8,22 +8,22 @@ import Typography from "@material-ui/core/Typography";
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="app">
       <h1>Wing Chun Workout Tracker</h1>
       <h2>Welcome to our Home Page!</h2>
-      <nav className="Navbar">
-        <Link href="#" className="Link">
+      <nav className="navbar">
+        <a href="#" className="link">
           Link
-        </Link>
-        <Link href="#" className="Link">
+        </a>
+        <a  href="#" className="link">
           Link
-        </Link>
-        <Link href="#" className="Link">
+        </a>
+        <a href="#" className="link">
           Link
-        </Link>
-        <Link href="#" className="Link">
+        </a>
+        <a href="#" className="link">
           Link
-        </Link>
+        </a>
       </nav>
 
       <Register />
