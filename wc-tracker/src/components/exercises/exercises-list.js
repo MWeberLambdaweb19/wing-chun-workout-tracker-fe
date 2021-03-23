@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, styled } from "@material-ui/core/styles";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
@@ -12,6 +12,7 @@ import {
   group4,
   group5
 } from "../dummyData/dummyData.js";
+import { red } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,6 +23,11 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: theme.typography.fontWeightRegular
   }
 }));
+
+const MyTypography = styled(Typography)({
+  text-align: 'center',
+  color: 'center',
+})
 
 function ExercisesList() {
   return (
@@ -43,7 +49,7 @@ function ExercisesList() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Group 1</Typography>
+          <MyTypography>Group 1</MyTypography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
