@@ -25,9 +25,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const MyTypography = styled(Typography)({
-  text-align: 'center',
-  color: 'center',
+  color: 'red',
 })
+
+const workout = []
+
+function AddToWorkout(item) {
+  workout.push(item)
+}
 
 function ExercisesList() {
   return (
@@ -49,12 +54,24 @@ function ExercisesList() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
+          <MyTypography>My Current Workout</MyTypography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <button>Submit</button>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
           <MyTypography>Group 1</MyTypography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
             {group1.map((item) => (
-              <Typography>{item}</Typography>
+            <button>{item}</button>
             ))}
           </Typography>
         </AccordionDetails>
@@ -70,7 +87,7 @@ function ExercisesList() {
         <AccordionDetails>
           <Typography>
             {group2.map((item) => (
-              <Typography>{item}</Typography>
+            <button>{item}</button>
             ))}
           </Typography>
         </AccordionDetails>
@@ -86,7 +103,7 @@ function ExercisesList() {
         <AccordionDetails>
           <Typography>
             {group3.map((item) => (
-              <Typography>{item}</Typography>
+            <button>{item}</button>
             ))}
           </Typography>
         </AccordionDetails>
@@ -102,7 +119,7 @@ function ExercisesList() {
         <AccordionDetails>
           <Typography>
             {group4.map((item) => (
-              <Typography>{item}</Typography>
+            <button>{item}</button>
             ))}
           </Typography>
         </AccordionDetails>
@@ -118,7 +135,7 @@ function ExercisesList() {
         <AccordionDetails>
           <Typography>
             {group5.map((item) => (
-              <Typography>{item}</Typography>
+            <button>{item}</button>
             ))}
           </Typography>
         </AccordionDetails>
