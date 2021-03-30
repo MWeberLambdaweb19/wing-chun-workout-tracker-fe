@@ -34,6 +34,8 @@ function AddToWorkout(item) {
   workout.push(item)
 }
 
+console.log(workout)
+
 function ExercisesList() {
   return (
     <div>
@@ -71,7 +73,7 @@ function ExercisesList() {
         <AccordionDetails>
           <Typography>
             {group1.map((item) => (
-            <button>{item}</button>
+            <button onclick={AddToWorkout({item})}>{item}</button>
             ))}
           </Typography>
         </AccordionDetails>
